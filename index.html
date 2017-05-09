@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Date Picker</title>
+	<link href="jquery-ui.css" rel="stylesheet">
+	<style>
+		#myDataPickerP img{
+			vertical-align: middle;
+		    height: 18px;
+		    width: 18px;
+		    padding: 5px;
+		    cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<p id="myDataPickerP">Start Date: <input type="text" id="datepicker1" class="datepicker"></p>
+	<p id="myDataPickerP">End Date: <input type="text" id="datepicker2" class="datepicker"></p>
+
+
+	<script src="jquery-1.12.4.js"></script>
+	<script src="jquery-ui.js"></script>
+	<script>
+		$(function() {
+    		$(".datepicker").datepicker({
+    			showOn: "button",
+                buttonImage: "http://jqueryui.com/resources/demos/datepicker/images/calendar.gif",
+                buttonImageOnly: true,
+                dateFormat: "mm/dd/yy"
+
+    		});
+    		/*$("#datepicker1").change(function(){
+    			alert($("#datepicker1").val());
+    		})*/
+    		
+  		});
+  </script>
+</body>
+</html>
